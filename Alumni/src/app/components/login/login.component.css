@@ -5,7 +5,6 @@
     background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkGaa7NkPKyfJDgwWinN4D9cUS_mCuxDanzR_352uOrQMBWNpVHWnr57EVCOiGaaJyams&usqp=CAU");
     position:relative;
     box-shadow: 0 2px 10px #5A8F11;
-    background-attachment: fixed;
     }
     
     .login-dark form {

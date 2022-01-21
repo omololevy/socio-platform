@@ -6,6 +6,11 @@ import { AppComponent } from './app.component';
 import { BlogsComponent } from './components/blogs/blogs/blogs.component';
 import { HomePageComponent } from './components/home-page/home-page/home-page.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { LoginComponent } from './components/login/login.component';
+import { RegisterComponent } from './components/register/register.component';
+
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -14,10 +19,15 @@ import { NavbarComponent } from './components/navbar/navbar.component';
     HomePageComponent,
     NavbarComponent,
 
+    LoginComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

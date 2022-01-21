@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&family=Poppins:ital,wght@0,200;0,400;0,500;0,600;0,700;1,400;1,700&display=swap');
 *{
     margin: 0px;
     padding: 0px;
@@ -50,8 +51,7 @@ margin-bottom: 50px;
     height: auto;
 }
 .content .article h3{
-    color: #a3a3a3;
-    font-size: 20px;
+    font-size: 25px;
 }
 .content .article p{
    margin-top: 20px; 
@@ -59,6 +59,7 @@ margin-bottom: 50px;
    line-height: 1.5;
    color: #333; 
 }
+
 
 .content .article .button a{
     text-decoration:none;
@@ -73,4 +74,15 @@ margin-bottom: 50px;
     color: #fff;
     background-color: green;
     transition: 1s ease;
+}
+.digit{
+    display: inline-block;
+
+    font-size: 10px;
+    text-align: center;
+    font-style: italic;
+    color: #88941e;
+    display: inline;
+
+
 }

@@ -37,8 +37,8 @@
 </div> -->
 
 
-<nav class="navbar navbar-expand-md" style="background-color: #5A8F11;">
-  <a class="navbar-brand" style="color: white;"><b>ALUMINI</b></a>
+<!-- <nav class="navbar navbar-expand-md" style="background-color: #5A8F11;">
+  <a class="navbar-brand" style="color: white;"><b>ALUMNI</b></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
     aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon white"></span>
@@ -57,4 +57,84 @@
       <li><a routerLink="/login" style="text-decoration: none; color: #f6f7f4;">Login</a></li>
     </ul>
   </div>
-</nav>
+</nav> -->
+
+
+<!-- TOOL BAR -->
+<!-- <div class="toolbar py-5" role="banner">
+  <img class="rounded-circle" width="70rem"  height="70rem" alt="Angular Logo"
+    src="../../../assets/moringa_logo.png"/>
+  <span>Moringa Alumni</span>
+
+  <div class="spacer"></div>
+  <a class="nav-item btn btn-outline-success" style="color: white;" href="/home">Home</a>&nbsp;&nbsp;
+  <a class="nav-item btn btn-outline-success" style="color: white;" href="/blogs">Blogs</a>&nbsp;&nbsp;
+  <a class="nav-item btn btn-outline-success" style="color: white;" href="/about">About</a>
+  
+  <a class="btn btn-outline-success" aria-label="Login" rel="noopener" href="/login" title="Login">
+    <b style="color: white; border-color: white;">Login</b>
+  </a>
+</div>
+
+<div class="content" role="main">
+
+   -->
+
+<div class="nav-wrapper" style="background-color:#5A8F11">
+  <img class="rounded-circle " width="70rem"  height="70rem" alt="Moringa Logo"
+    src="../../../assets/moringa_logo.png"/>
+
+  <h3 class="white left">Moringa Alumni</h3>
+
+  <ul id="navigation">
+    <h2 id="close-btn" style="text-align: center">
+      <img src="./../../assets/menu.png"/></h2>
+    <li><a style="color: white;" href="/home" class="btn btn-outline-success" >Home</a></li>
+    <li><a class="btn btn-outline-success"style="color: white;" href="/channels">Channels</a></li>
+    <li><a class="btn btn-outline-success" style="color: white;" href="/blogs">Blogs</a></li>
+  </ul>
+  <a class="btn btn-outline-success" aria-label="Login" rel="noopener" href="/login" title="Login">
+    <b style="color: white; border-color: white;">Login</b>
+  </a>
+  <img id="menu-icon" src="./../../assets/menu.png">
+
+</div>
+
+
+<script type="text/javascript">
+  let menu = 'closed'
+
+  let menuIcon = document.getElementById('menu-icon')
+  let navigation = document.getElementById('navigation')
+  let closeBtn = document.getElementById('close-btn')
+
+  menuIcon.addEventListener('click', toggleMenu)
+  closeBtn.addEventListener('click', toggleMenu)
+
+
+  function toggleMenu() {
+    if (menu == 'closed') {
+      navigation.style.display = 'block'
+      closeBtn.style.display = 'block'
+      menu = 'open'
+    } else {
+      navigation.style.display = 'none'
+      closeBtn.style.display = 'none'
+      menu = 'closed'
+    }
+  }
+
+
+  // Attaching the event listener function to window's resize event
+
+  window.addEventListener("resize", function () {
+    let width = document.documentElement.clientWidth;
+    if (width > 1080) {
+      navigation.style.display = 'block'
+    } else {
+      navigation.style.display = 'none'
+    }
+    menu = 'closed'
+    closeBtn.style.display = 'none'
+  });
+</script>

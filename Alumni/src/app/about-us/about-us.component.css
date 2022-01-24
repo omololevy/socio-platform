@@ -4,7 +4,9 @@
     padding: 0px;
     box-sizing: border-box;
     font-family: 'poppins', sans-serif;
+    
 }
+
 .section
 {
     width: 100%;
@@ -38,12 +40,12 @@ margin-bottom: 50px;
 }
 .content
 {
-    float: left;
+    /* float: left; */
     width: 55%;
 
 }
 .image-section{
-    float:right;
+    float:left;
     width: 40%;
 }
 .image-section img{
@@ -66,7 +68,7 @@ margin-bottom: 50px;
     padding: 8px 25px;
     background-color: #88941e;
     border-radius: 40px;
-    color: #fff;
+    color: #fff;             
     font-size: 18 px;
     letter-spacing: 1.5px;
 }

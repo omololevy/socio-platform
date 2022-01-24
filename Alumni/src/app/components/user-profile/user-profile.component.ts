@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
-import { AuthapiService } from '../../services/authapi.service';
+
 
 @Component({
   selector: 'app-user-profile',

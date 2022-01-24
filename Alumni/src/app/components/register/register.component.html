@@ -15,28 +15,24 @@
     <form  #f="ngForm">
       <h2 class="sr-only" style="color: #5A8F11 !important">Register</h2>
       <h2 class="text-center" style="color: #5A8F11 !important">Register</h2>
-     
-
-     
       <div class="form-group">
-        <input class="form-control" type="text" name="username" placeholder="Username" ngModel required username />
+        <input class="form-control" [(ngModel)] ="register.username" type="text" name="username" placeholder="Username" />
       </div>
       <div class="form-group">
-        <input class="form-control" type="email" name="email" placeholder="Email" ngModel required email />
+        <input class="form-control" [(ngModel)] ="register.email" type="email" name="email" placeholder="Email" />
       </div>
+      <!-- <div class="form-group">
+        <input class="form-control" [(ngModel)] ="register.phone_number" type="tel" name="phone" placeholder="Phone Number" />
+      </div> -->
       <div class="form-group">
-        <input class="form-control" type="tel" name="phone" placeholder="Phone Number" ngModel required phone />
+        <input class="form-control" [(ngModel)] ="register.password" type="password" name="password" placeholder="Password" />
       </div>
-      <div class="form-group">
-        <input class="form-control" type="password" name="password" placeholder="Password" ngModel required password />
-      </div>
-      <div class="form-group">
-        <input class="form-control" type="password" name="password2" placeholder="Confirm Password" ngModel required
-          password2 />
-      </div>
+      <!-- <div class="form-group">
+        <input class="form-control" [(ngModel)] ="register.password2"type="password" name="password2" placeholder="Confirm Password"/>
+      </div> -->
 
       <div class="form-group">
-        <button class="btn btn-block text-light" type="submit" style="background-color: #5A8F11 !important"
+        <button (click)="registerUser()" class="btn btn-block text-light" type="submit" style="background-color: #5A8F11 !important"
           [disabled]="!f.valid">
           Sign Up
         </button>

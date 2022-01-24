@@ -17,15 +17,15 @@
     </h1>
     
     <div class="form-group">
-      <input class="form-control" type="text" name="username" style="color: black" placeholder="Username" ngModel
+      <input class="form-control" [(ngModel)] ="login.username" type="text" name="username" style="color: black" placeholder="Username" ngModel
         required username />
     </div>
     <div class="form-group">
-      <input class="form-control" type="password" name="password" style="color: black" placeholder="Password" ngModel
+      <input class="form-control" [(ngModel)] ="login.password"type="password" name="password" style="color: black" placeholder="Password" ngModel
         password required />
     </div>
     <div class="form-group">
-      <button class="btn btn-primary btn-block" type="submit" style="background-color: #5A8F11"
+      <button (click)="loginUser()" class="btn btn-primary btn-block" type="submit" style="background-color: #5A8F11"
         [disabled]="!f.valid">
         Log In
       </button>

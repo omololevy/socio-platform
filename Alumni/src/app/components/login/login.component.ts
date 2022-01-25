@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { UserService } from 'src/app/user.service';
+import { UserService } from 'src/app/services/user.service';
 
 
 @Component({
@@ -9,7 +9,7 @@ import { UserService } from 'src/app/user.service';
 })
 export class LoginComponent implements OnInit {
   login:any;
-
+  
   constructor(private userService : UserService) {}
 
   ngOnInit(){

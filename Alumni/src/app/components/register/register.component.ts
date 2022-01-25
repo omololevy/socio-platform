@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { UserService } from 'src/app/user.service';
+import { UserService } from 'src/app/services/user.service';
+import { HttpClientXsrfModule } from '@angular/common/http';
 
 @Component({
   selector: 'app-register',
@@ -8,6 +9,8 @@ import { UserService } from 'src/app/user.service';
   providers: [UserService]
 })
 export class RegisterComponent implements OnInit {
+  passwordMismatch: boolean = false;
+  usernameExists: boolean = false;
 
   register:any;
 

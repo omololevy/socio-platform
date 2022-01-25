@@ -292,3 +292,6 @@
       visibility: hidden;
     }
   }
+  .card {
+      border-color: #5A8F11;
+  }

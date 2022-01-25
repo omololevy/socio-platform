@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { UserService } from 'src/app/user.service';
+
 
 @Component({
   selector: 'app-login',
@@ -8,6 +10,8 @@ import { Component, OnInit } from '@angular/core';
 export class LoginComponent implements OnInit {
   login:any;
 
+  constructor(private userService : UserService) {}
+
   ngOnInit(){
     this.login = {
       username : '',
@@ -16,9 +20,9 @@ export class LoginComponent implements OnInit {
   }
 
   loginUser(){
-    this.userService.loginUser(this.register).subscribe(
+    this.userService.loginUser(this.login).subscribe(
       response => {
-        alert('User ' + this.register.username + ' has been created successfully!')
+        alert('User ' + this.login.username + ' has been logged in succesfully!')
       },
       error => console.log('error',error)
     );

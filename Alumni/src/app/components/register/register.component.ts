@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from 'src/app/user.service';
-import { HttpClientXsrfModule } from '@angular/common/http';
 
 @Component({
   selector: 'app-register',

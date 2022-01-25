@@ -16,4 +16,13 @@ export class UserService {
     }
     return this.http.post('http://127.0.0.1:8000/users/',userData,mercy)
   }
+
+  loginUser(userData:any):Observable<any>{
+    let header;
+    header = {headers: new HttpHeaders({
+      'Content-Type': 'application/json'
+    })
+    }
+    return this.http.post('http://127.0.0.1:8000/api-auth/',userData,header)
+  }
 }

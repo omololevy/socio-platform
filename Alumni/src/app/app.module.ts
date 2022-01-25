@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AboutUsComponent } from './components/about-us/about-us.component';
@@ -16,6 +15,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { ChannelsComponent } from './components/channels/channels.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { UserProfileComponent } from './components/user-profile/user-profile.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CreateCohortComponent } from './components/create-cohort/create-cohort.component';
 
 @NgModule({
   declarations: [
@@ -25,12 +26,12 @@ import { UserProfileComponent } from './components/user-profile/user-profile.com
     BlogsComponent,
     HomePageComponent,
     NavbarComponent,
-
     LoginComponent,
     RegisterComponent,
     ChannelsComponent,
     SidebarComponent,
-    UserProfileComponent
+    UserProfileComponent,
+    CreateCohortComponent
   ],
   imports: [
     BrowserModule,
@@ -39,6 +40,7 @@ import { UserProfileComponent } from './components/user-profile/user-profile.com
     MatSliderModule,
     ReactiveFormsModule,
     HttpClientModule,
+    BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

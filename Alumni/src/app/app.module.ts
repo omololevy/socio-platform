@@ -18,6 +18,8 @@ import { ChannelsComponent } from './components/channels/channels.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { UserProfileComponent } from './components/user-profile/user-profile.component';
 import { UpdateProfileComponent } from './components/update-profile/update-profile.component'
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CreateCohortComponent } from './components/create-cohort/create-cohort.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +34,8 @@ import { UpdateProfileComponent } from './components/update-profile/update-profi
     RegisterComponent,
     ChannelsComponent,
     SidebarComponent,
-    UserProfileComponent
+    UserProfileComponent,
+    CreateCohortComponent
   ],
   imports: [
     BrowserModule,
@@ -41,6 +44,7 @@ import { UpdateProfileComponent } from './components/update-profile/update-profi
     MatSliderModule,
     ReactiveFormsModule,
     HttpClientModule,
+    BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

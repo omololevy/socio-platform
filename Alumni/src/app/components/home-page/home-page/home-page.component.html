@@ -28,39 +28,3 @@
     
   </div>
 </div>
-<!-- Read the Formbutton docs at formspree.io/formbutton/docs. See more examples at codepen.io/formspree -->
-<script src="https://formspree.io/js/formbutton-v1.min.js" defer></script>
-<script>
-  /* paste this line in verbatim */
-  window.formbutton=window.formbutton||function(){(formbutton.q=formbutton.q||[]).push(arguments)};
-  /* customize formbutton below*/
-  formbutton("create", {
-    theme: "classic",
-    action: "https://formspree.io/f/mqknejnr",
-    title: "Contact Us",
-    fields: [
-      {
-        type: "email",
-        label: "Email:",
-        name: "email",
-        required: true,
-        placeholder: "your@email.com"
-      },
-      {
-        type: "textarea",
-        label: "Message:",
-        name: "message",
-        placeholder: "Message...",
-      },
-      { type: "submit" }
-    ],
-    styles: {
-      title: {
-        backgroundColor: "#5A8F11"
-      },
-      button: {
-        backgroundColor: "#5A8F11"
-      }
-    }
-  });
-</script>

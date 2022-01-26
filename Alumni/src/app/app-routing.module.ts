@@ -8,6 +8,7 @@ import { AboutUsComponent} from './components/about-us/about-us.component'
 import { HomePageComponent } from './components/home-page/home-page/home-page.component';
 import { BlogsComponent } from './components/blogs/blogs/blogs.component';
 import { UpdateProfileComponent } from './components/update-profile/update-profile.component';
+import { CreateCohortComponent } from './components/create-cohort/create-cohort.component';
 
 const routes: Routes = [
   {path: '', redirectTo:'home', pathMatch:'full'},
@@ -20,7 +21,9 @@ const routes: Routes = [
   {path: 'register', component: RegisterComponent},
   {path: 'login', component: LoginComponent},
   {path: '', redirectTo: 'index', pathMatch: 'full'},
-  {path: '**', redirectTo: 'index', pathMatch: 'full'}
+  {path: '**', redirectTo: 'index', pathMatch: 'full'},
+  {path: 'create_cohort', component: CreateCohortComponent},
+
   
 ];
 

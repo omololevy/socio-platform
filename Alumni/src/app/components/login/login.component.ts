@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { NgForm } from '@angular/forms';
-import { Router } from '@angular/router';
+import { UserService } from 'src/app/services/user.service';
 
-import { AuthapiService } from '../../services/authapi.service';
 
 @Component({
   selector: 'app-login',
@@ -10,31 +8,23 @@ import { AuthapiService } from '../../services/authapi.service';
   styleUrls: ['./login.component.css'],
 })
 export class LoginComponent implements OnInit {
-  showErrorMessage: boolean = false;
+  login:any;
+  
+  constructor(private userService : UserService) {}
 
-  constructor(private service: AuthapiService, private router: Router) {}
-  ngOnInit(): void {}
+  ngOnInit(){
+    this.login = {
+      username : '',
+      password : ''
+    };
+  }
 
-  loginUser(form: NgForm) {
-    this.showErrorMessage = false;
-    const username = form.value.username;
-    const password = form.value.password;
-    this.service.loginUser(username, password).subscribe(
-      (response) => {
-        console.log(response);
-        localStorage.setItem('currentUser', JSON.stringify(response));
-        this.service.getToken(username, password).subscribe(
-          (response: any) => {
-            console.log(response);
-            localStorage.setItem('token', response.token);
-          }
-        );
-        this.router.navigateByUrl('/home');
+  loginUser(){
+    this.userService.loginUser(this.login).subscribe(
+      response => {
+        alert('User ' + this.login.username + ' has been logged in succesfully!')
       },
-      (error) => {
-        console.log(error);
-        this.showErrorMessage = true;
-      }
+      error => console.log('error',error)
     );
   }
 }

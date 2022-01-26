@@ -7,6 +7,7 @@ import { UserProfileComponent } from './components/user-profile/user-profile.com
 import { AboutUsComponent} from './components/about-us/about-us.component'
 import { HomePageComponent } from './components/home-page/home-page/home-page.component';
 import { BlogsComponent } from './components/blogs/blogs/blogs.component';
+import { UpdateProfileComponent } from './components/update-profile/update-profile.component';
 
 const routes: Routes = [
   {path: '', redirectTo:'home', pathMatch:'full'},
@@ -15,7 +16,7 @@ const routes: Routes = [
   {path: 'channels', component: ChannelsComponent,  data:{requiresLogin: true}},
   {path: 'user_profile', component: UserProfileComponent},
   {path: 'about', component: AboutUsComponent },
-
+  {path: 'update_profile', component: UpdateProfileComponent},
   {path: 'register', component: RegisterComponent},
   {path: 'login', component: LoginComponent},
   {path: '', redirectTo: 'index', pathMatch: 'full'},

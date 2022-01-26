@@ -16,6 +16,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { ChannelsComponent } from './components/channels/channels.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { UserProfileComponent } from './components/user-profile/user-profile.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -39,6 +40,7 @@ import { UserProfileComponent } from './components/user-profile/user-profile.com
     MatSliderModule,
     ReactiveFormsModule,
     HttpClientModule,
+    BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

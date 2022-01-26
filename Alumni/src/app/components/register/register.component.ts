@@ -28,7 +28,9 @@ export class RegisterComponent implements OnInit {
       response => {
         alert('User ' + this.register.username + ' has been created successfully!')
       },
-      error => console.log('error',error)
-    );
+      error => {  
+        alert('An Unexpected Error Occured. Please try again later!');  
+        console.log(error);
+      });
   }
 }

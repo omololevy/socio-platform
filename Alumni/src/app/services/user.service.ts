@@ -2,19 +2,21 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs/';
 
-@Injectable()
+@Injectable({
+  providedIn: 'root',
+})
 export class UserService {
 
   constructor(private http:HttpClient) { }
 
   registerUser(userData:any):Observable<any>{
-    let mercy;
+    let headers;
     console.log(userData)
-    mercy = {headers: new HttpHeaders({
+    headers = {headers: new HttpHeaders({
       'Content-Type': 'application/json'
     })
     }
-    return this.http.post('http://127.0.0.1:8000/users/',userData, mercy)
+    return this.http.post('http://127.0.0.1:8000/users/',userData, headers)
   }
 
   updateProfile(userData:any):Observable<any>{
@@ -25,5 +27,10 @@ export class UserService {
     })
     }
     return this.http.post('http://127.0.0.1:8000/profile/',userData,attr)
+
+  }
+
+  loginUser(userData:any):Observable<any>{
+    return this.http.post('http://127.0.0.1:8000/api-auth/',userData)
   }
 }

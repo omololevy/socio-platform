@@ -11,13 +11,13 @@
 
     <div class="login-dark">
         <form  #f="ngForm">
-        <h2 class="sr-only" style="color: #5A8F11 !important">Create Cohort</h2>
-        <h2 class="text-center" style="color: #5A8F11 !important">Create Cohort</h2>
+        <h2 class="sr-only" style="color: #5A8F11 !important">Create Group</h2>
+        <h2 class="text-center" style="color: #5A8F11 !important">Create Group</h2>
         <div class="form-group">
-            <input class="form-control" [(ngModel)] ="cohort.name" type="text" name="name" placeholder="Cohort Name" />
+            <input class="form-control" [(ngModel)] ="cohort.name" type="text" name="name" placeholder="Group Name" />
         </div>
         <div class="form-group">
-            <input class="form-control" [(ngModel)] ="cohort.description" type="email" name="description" placeholder="Cohort description" />
+            <input class="form-control" [(ngModel)] ="cohort.description" type="email" name="description" placeholder="Group description" />
         </div>
         <div class="form-group">
             <button (click)="publicCohort()" class="btn btn-block text-light" type="submit" style="background-color: #5A8F11 !important"

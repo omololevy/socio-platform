@@ -7,30 +7,41 @@ import { Observable } from 'rxjs/';
 })
 export class UserService {
 
-  constructor(private http:HttpClient) { }
+  constructor(private http: HttpClient) { }
 
-  registerUser(userData:any):Observable<any>{
+  registerUser(userData: any): Observable<any> {
     let headers;
     console.log(userData)
-    headers = {headers: new HttpHeaders({
-      'Content-Type': 'application/json'
-    })
+    headers = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json'
+      })
     }
-    return this.http.post('http://127.0.0.1:8000/users/',userData, headers)
+    return this.http.post('http://127.0.0.1:8000/users/', userData, headers)
   }
 
-  updateProfile(userData:any):Observable<any>{
+  updateProfile(userData: any): Observable<any> {
     let attr;
-    
-    attr = {headers: new HttpHeaders({
-      'Content-Type': 'application/json'
-    })
+
+    attr = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json'
+      })
     }
-    return this.http.post('http://127.0.0.1:8000/profile/',userData,attr)
+    return this.http.post('http://127.0.0.1:8000/profile/', userData, attr)
 
   }
 
-  loginUser(userData:any):Observable<any>{
-    return this.http.post('http://127.0.0.1:8000/api-auth/',userData)
+  loginUser(userData: any): Observable<any> {
+    return this.http.post('http://127.0.0.1:8000/api-auth/', userData)
   }
+
+
+//   logoutUser() {
+//     localStorage.removeItem('currentUser');
+//   }
+
+//   currentUserValue() {
+//     return JSON.parse(localStorage.getItem('currentUser'));
+//   }
 }

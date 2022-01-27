@@ -6,6 +6,10 @@ body {
       padding-left: 240px;
     }
   }
+
+  a {
+    background-color: #919D47;
+  }
   
   /* Sidebar */
   .sidebar {

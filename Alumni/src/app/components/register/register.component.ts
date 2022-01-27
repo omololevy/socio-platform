@@ -20,8 +20,9 @@ export class RegisterComponent implements OnInit {
     this.register = {
       username : '',
       email :'',
+      phone_number:'',
       password:'',
-      confirm: '',
+      password2: '',
     };
   }
   registerUser(){

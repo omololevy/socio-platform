@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from 'src/app/services/user.service';
+import { Router } from '@angular/router';
+
 
 
 @Component({
@@ -10,7 +12,7 @@ import { UserService } from 'src/app/services/user.service';
 export class LoginComponent implements OnInit {
   login:any;
   
-  constructor(private userService : UserService) {}
+  constructor(private userService : UserService, private router: Router) {}
 
   ngOnInit(){
     this.login = {
@@ -22,7 +24,8 @@ export class LoginComponent implements OnInit {
   loginUser(){
     this.userService.loginUser(this.login).subscribe(
       response => {
-        alert('User ' + this.login.username + ' has been logged in succesfully!')
+        console.log(response);
+            this.router.navigateByUrl('/channels');
       },
       error => console.log('error',error)
     );

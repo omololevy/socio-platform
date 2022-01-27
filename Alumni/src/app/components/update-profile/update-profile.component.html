@@ -28,7 +28,7 @@
         <input class="form-control" [(ngModel)] ="update.phone_number" type="tel" name="phone" placeholder="Phone Number" />
       </div>
       <div class="form-group">
-        <input class="form-control" [(ngModel)] ="update.profile_pic" type="image" name="profile_pic" placeholder="profile picture" />
+        <app-photo-upload></app-photo-upload>
       </div>
       <div class="form-group">
         <input class="form-control" [(ngModel)] ="update.bio"type="textarea" name="bio" placeholder="Something about yourself"/>

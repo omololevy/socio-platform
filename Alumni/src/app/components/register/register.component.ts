@@ -6,7 +6,7 @@ import { HttpClientXsrfModule } from '@angular/common/http';
   selector: 'app-register',
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.css'],
-  providers: [UserService]
+  providers: [UserService],
 })
 export class RegisterComponent implements OnInit {
   passwordMismatch: boolean = false;

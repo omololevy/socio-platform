@@ -16,7 +16,18 @@ export class UserService {
       'Content-Type': 'application/json'
     })
     }
-    return this.http.post('http://127.0.0.1:8000/users/',userData,headers)
+    return this.http.post('http://127.0.0.1:8000/users/',userData, headers)
+  }
+
+  updateProfile(userData:any):Observable<any>{
+    let attr;
+    
+    attr = {headers: new HttpHeaders({
+      'Content-Type': 'application/json'
+    })
+    }
+    return this.http.post('http://127.0.0.1:8000/profile/',userData,attr)
+
   }
 
   loginUser(userData:any):Observable<any>{

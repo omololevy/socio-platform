@@ -9,42 +9,58 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css" />
   <!-- <link rel="stylesheet" href="assets/css/style.css"> -->
 </head>
+<div class="row">
 
-<body>
-  <div class="login-dark">
-    <form  #f="ngForm">
-      <h2 class="sr-only" style="color: #5A8F11 !important">Update Profile</h2>
-      <h2 class="text-center" style="color: #5A8F11 !important">Update Profile</h2>
-      <div class="form-group">
-        <input class="form-control" [(ngModel)] ="update.first_name" type="text" name="first_name" placeholder="First name" />
-      </div>
-      <div class="form-group">
-        <input class="form-control" [(ngModel)] ="update.second_name" type="text" name="second_name" placeholder="Second name" />
-      </div>
-      <div class="form-group">
-        <input class="form-control" [(ngModel)] ="update.email" type="email" name="email" placeholder="Email" />
-      </div>
-      <div class="form-group">
-        <input class="form-control" [(ngModel)] ="update.phone_number" type="tel" name="phone" placeholder="Phone Number" />
-      </div>
-      <div class="form-group">
-        <app-photo-upload></app-photo-upload>
-      </div>
-      <div class="form-group">
-        <input class="form-control" [(ngModel)] ="update.bio"type="textarea" name="bio" placeholder="Something about yourself"/>
-      </div>
+  <div class="col-md-3">
+    <app-sidebar>
 
-      <div class="form-group">
-        <button (click)="updateProfile()" class="btn btn-block text-light" type="submit" style="background-color: #5A8F11 !important"
-          [disabled]="!f.valid">
-          Save
-        </button>
-      </div>
-      <a routerLink="/user_profile" class="forgot">Cancel</a>
-    </form>
+    </app-sidebar>
   </div>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
-</body>
+
+  <div class="col-md-9">
+
+    <body>
+      <div class="login-dark">
+        <form #f="ngForm">
+          <h2 class="sr-only" style="color: #5A8F11 !important">Update Profile</h2>
+          <h2 class="text-center" style="color: #5A8F11 !important">Update Profile</h2>
+          <div class="form-group">
+            <input class="form-control" [(ngModel)]="update.first_name" type="text" name="first_name"
+              placeholder="First name" />
+          </div>
+          <div class="form-group">
+            <input class="form-control" [(ngModel)]="update.second_name" type="text" name="second_name"
+              placeholder="Second name" />
+          </div>
+          <div class="form-group">
+            <input class="form-control" [(ngModel)]="update.email" type="email" name="email" placeholder="Email" />
+          </div>
+          <div class="form-group">
+            <input class="form-control" [(ngModel)]="update.phone_number" type="tel" name="phone"
+              placeholder="Phone Number" />
+          </div>
+          <div class="form-group">
+            <app-photo-upload></app-photo-upload>
+          </div>
+          <div class="form-group">
+            <input class="form-control" [(ngModel)]="update.bio" type="textarea" name="bio"
+              placeholder="Something about yourself" />
+          </div>
+
+          <div class="form-group">
+            <button (click)="updateProfile()" class="btn btn-block text-light" type="submit"
+              style="background-color: #5A8F11 !important" [disabled]="!f.valid">
+              Save
+            </button>
+          </div>
+          <a routerLink="/user_profile" class="forgot">Cancel</a>
+        </form>
+      </div>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+    </body>
+  </div>
+</div>
+
 
 </html>

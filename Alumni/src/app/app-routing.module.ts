@@ -1,3 +1,4 @@
+import { ChatsComponent } from './components/chats/chats.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './components/login/login.component';
@@ -9,6 +10,8 @@ import { HomePageComponent } from './components/home-page/home-page/home-page.co
 import { BlogsComponent } from './components/blogs/blogs/blogs.component';
 import { UpdateProfileComponent } from './components/update-profile/update-profile.component';
 import { CreateCohortComponent } from './components/create-cohort/create-cohort.component';
+import { CohortComponent } from './components/cohort/cohort.component';
+import { FundraisersComponent } from './components/fundraisers/fundraisers.component';
 
 const routes: Routes = [
   {path: '', redirectTo:'home', pathMatch:'full'},
@@ -23,6 +26,9 @@ const routes: Routes = [
   {path: '', redirectTo: 'index', pathMatch: 'full'},
   {path: '**', redirectTo: 'index', pathMatch: 'full'},
   {path: 'create_cohort', component: CreateCohortComponent},
+  {path: 'cohort', component: CohortComponent},
+  {path: 'chats', component: ChatsComponent},
+  {path: 'fundraiser', component: FundraisersComponent}
 
   
 ];

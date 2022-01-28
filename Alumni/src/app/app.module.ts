@@ -21,6 +21,11 @@ import { UpdateProfileComponent } from './components/update-profile/update-profi
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CreateCohortComponent } from './components/create-cohort/create-cohort.component';
 import { PhotoUploadComponent } from './components/photo-upload/photo-upload.component';
+import { ContactsComponent } from './components/contacts/contacts.component';
+import { GroupsComponent } from './components/groups/groups.component';
+import { ChatsComponent } from './components/chats/chats.component';
+import { FundraisersComponent } from './components/fundraisers/fundraisers.component';
+import { CohortComponent } from './components/cohort/cohort.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +42,12 @@ import { PhotoUploadComponent } from './components/photo-upload/photo-upload.com
     SidebarComponent,
     UserProfileComponent,
     CreateCohortComponent,
-    PhotoUploadComponent
+    PhotoUploadComponent,
+    ContactsComponent,
+    GroupsComponent,
+    ChatsComponent,
+    FundraisersComponent,
+    CohortComponent
   ],
   imports: [
     BrowserModule,

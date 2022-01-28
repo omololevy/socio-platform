@@ -14,7 +14,7 @@ export class UserProfileComponent implements OnInit {
   username = '';
   email = '';
   first_name = '';
-  last_name = '';
+  second_name = '';
 
 
   constructor(private userService : UserService) { }

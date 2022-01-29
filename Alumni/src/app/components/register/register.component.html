@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Untitled</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css" />
+  <!-- <link rel="stylesheet" href="assets/css/style.css"> -->
+</head>
+
+<body>
+  <div class="login-dark">
+    <form  #f="ngForm">
+      <h2 class="sr-only" style="color: #5A8F11 !important">Register</h2>
+      <h2 class="text-center" style="color: #5A8F11 !important">Register</h2>
+      <div class="form-group">
+        <input class="form-control" [(ngModel)] ="register.username" type="text" name="username" placeholder="Username" />
+      </div>
+      <div class="form-group">
+        <input class="form-control" [(ngModel)] ="register.email" type="email" name="email" placeholder="Email" />
+      </div>
+      <div class="form-group">
+        <input class="form-control" [(ngModel)] ="register.phone_number" type="tel" name="phone" placeholder="Phone Number" />
+      </div>
+      <div class="form-group">
+        <input class="form-control" [(ngModel)] ="register.password" type="password" name="password" placeholder="Password" />
+      </div>
+      <div class="form-group">
+        <input class="form-control" [(ngModel)] ="register.password2"type="password" name="password2" placeholder="Confirm Password"/>
+      </div>
+
+      <div class="form-group">
+        <button (click)="registerUser()" class="btn btn-block text-light" type="submit" style="background-color: #5A8F11 !important"
+          [disabled]="!f.valid">
+          Sign Up
+        </button>
+      </div>
+      <a routerLink="/login" class="forgot">Already have an account?</a>
+    </form>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

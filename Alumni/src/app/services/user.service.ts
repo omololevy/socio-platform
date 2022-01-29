@@ -26,9 +26,10 @@ export class UserService {
     
     attr = {headers: new HttpHeaders({
       'Content-Type': 'application/json'
+      
     })
     }
-    return this.http.post('http://127.0.0.1:8000/profile/',profileData,attr)
+    return this.http.put('http://127.0.0.1:8000/profile/',profileData,attr)
 
   }
 

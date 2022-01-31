@@ -25,7 +25,7 @@ const routes: Routes = [
   {path: 'login', component: LoginComponent},
   {path: '', redirectTo: 'index', pathMatch: 'full'},
   {path: '**', redirectTo: 'index', pathMatch: 'full'},
-  {path: 'create_cohort', component: CreateCohortComponent},
+  {path: 'create_cohort/:id', component: CreateCohortComponent},
   {path: 'cohort', component: CohortComponent},
   {path: 'chats', component: ChatsComponent},
   {path: 'fundraiser', component: FundraisersComponent}

@@ -25,29 +25,29 @@
           <strong>Success!</strong> User Updated
           <button (click)="removeMessage()" type="button" data-bs-dismiss="alert" aria-label="Close">X</button>
       </div>
-        <form [formGroup]="editUser" (ngSubmit)="UpdateData()">
+        <form (ngSubmit)="updateProfile()">
           <h2 class="sr-only" style="color: #5A8F11 !important">Update Profile</h2>
           <h2 class="text-center" style="color: #5A8F11 !important">Update Profile</h2>
           <div class="form-group">
-            <input class="form-control" type="text" name="first_name"
+            <input class="form-control" [(ngModel)] ="profileData.first_name" type="text" name="first_name"
               placeholder="First name" />
           </div>
           <div class="form-group">
-            <input class="form-control"  type="text" name="second_name"
+            <input class="form-control" [(ngModel)] ="profileData.second_name" type="text" name="second_name"
               placeholder="Second name" />
           </div>
           <div class="form-group">
-            <input class="form-control" type="email" name="email" placeholder="Email" />
+            <input class="form-control" [(ngModel)] ="profileData.email"type="email" name="email" placeholder="Email" />
           </div>
           <div class="form-group">
-            <input class="form-control"  type="tel" name="phone"
+            <input class="form-control" [(ngModel)] ="profileData.tel_number" type="tel" name="phone"
               placeholder="Phone Number" />
           </div> 
           <div class="form-group">
             <app-photo-upload></app-photo-upload>
           </div> 
           <div class="form-group">
-            <input class="form-control" type="textarea" name="bio"
+            <input class="form-control" [(ngModel)] ="profileData.bio" type="textarea" name="bio"
               placeholder="Something about yourself" />
           </div>
 

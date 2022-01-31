@@ -11,28 +11,37 @@
 </head>
 
 <body>
+
   <div class="login-dark">
-    <form  #f="ngForm">
+    <form (ngSubmit)="registerUser(f)" #f="ngForm">
       <h2 class="sr-only" style="color: #5A8F11 !important">Register</h2>
       <h2 class="text-center" style="color: #5A8F11 !important">Register</h2>
+      <p class="text-center text-dark" style="color: red !important" *ngIf="passwordMismatch">
+        Password and Confirm Paasword do not match!
+      </p>
+
+      <p class="text-center text-dark" style="color: red !important" *ngIf="usernameExists">
+        That username already Exists!
+      </p>
       <div class="form-group">
-        <input class="form-control" [(ngModel)] ="register.username" type="text" name="username" placeholder="Username" />
+        <input class="form-control" type="text" name="username" placeholder="Username" ngModel required username />
       </div>
       <div class="form-group">
-        <input class="form-control" [(ngModel)] ="register.email" type="email" name="email" placeholder="Email" />
+        <input class="form-control" type="email" name="email" placeholder="Email" ngModel required email />
       </div>
       <div class="form-group">
-        <input class="form-control" [(ngModel)] ="register.phone_number" type="tel" name="phone" placeholder="Phone Number" />
+        <input class="form-control" type="tel" name="phone" placeholder="Phone Number" ngModel required phone />
       </div>
       <div class="form-group">
-        <input class="form-control" [(ngModel)] ="register.password" type="password" name="password" placeholder="Password" />
+        <input class="form-control" type="password" name="password" placeholder="Password" ngModel required password />
       </div>
       <div class="form-group">
-        <input class="form-control" [(ngModel)] ="register.password2"type="password" name="password2" placeholder="Confirm Password"/>
+        <input class="form-control" type="password" name="password2" placeholder="Confirm Password" ngModel required
+          password2 />
       </div>
 
       <div class="form-group">
-        <button (click)="registerUser()" class="btn btn-block text-light" type="submit" style="background-color: #5A8F11 !important"
+        <button class="btn btn-block text-light" type="submit" style="background-color: #5A8F11 !important"
           [disabled]="!f.valid">
           Sign Up
         </button>

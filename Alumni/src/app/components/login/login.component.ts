@@ -1,27 +1,42 @@
 import { Component, OnInit } from '@angular/core';
-import { UserService } from 'src/app/services/user.service';
 import { Router } from '@angular/router';
+import { NgForm } from '@angular/forms';
+
+import { UserService } from 'src/app/services/user.service';
+
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css'],
 })
 export class LoginComponent implements OnInit {
-  login:any;
-  constructor(private userService : UserService, private router: Router) {}
-  ngOnInit(){
-    this.login = {
-      username : '',
-      password : ''
-    };
-  }
-  loginUser(){
-    this.userService.loginUser(this.login).subscribe(
-      response => {
+  
+  showErrorMessage: boolean = false;
+  
+  constructor(private service: UserService, private router: Router) {}
+  ngOnInit(): void {}
+
+  loginUser(form: NgForm) {
+    this.showErrorMessage = false;
+    const username = form.value.username;
+    const password = form.value.password;
+    this.service.loginUser(username, password).subscribe(
+      (response:any) => {
         console.log(response);
-            this.router.navigateByUrl('/channels');
+        localStorage.setItem('currentUser', JSON.stringify(response));
+        this.service.getToken(username, password).subscribe(
+          (response: any) => {
+            console.log(response);
+            localStorage.setItem('token', response.token);
+          }
+        );
+        this.router.navigateByUrl('/user_profile');
       },
-      error => console.log('error',error)
+      (error:any) => {
+        console.log(error);
+        this.showErrorMessage = true;
+      }
     );
   }
 }

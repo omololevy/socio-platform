@@ -21,7 +21,7 @@ export class LoginComponent implements OnInit {
       response => {
         console.log(response);
         this.user_id = response.user_id
-        // console.log(this.user_id)
+        console.log(this.user_id)
             this.router.navigateByUrl('/channels/'+`${this.user_id}`);
       },
       error => console.log('error',error)

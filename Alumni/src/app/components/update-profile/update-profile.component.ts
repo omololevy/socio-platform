@@ -11,39 +11,30 @@ import { ActivatedRoute } from '@angular/router';
   providers: [ProfileService,UserService],
 })
 export class UpdateProfileComponent implements OnInit {
-  update:any;
+  // update:any;
   user_id!: any;
-  data: any;
+  // data: any;
   profileData: any;
   image:any;
 
   constructor( private userService: UserService,private user: ProfileService, private router: ActivatedRoute ) { }
 
-  editUser=new FormGroup( {
-    first_name: new FormControl( '' ),
-    second_name:new FormControl(''),
-    email: new FormControl( '' ),
-    phone:new FormControl(''),
-    bio:new FormControl(''),
-    image :new FormControl('')
-  } );
   message: boolean=false;
-  ngOnInit(): void {
+  ngOnInit(){
+    this.profileData = {
+      first_name:'',
+      second_name:'',
+      email :'',
+      tel_number:'',
+      bio:''
+    };
     this.user_id = this.router.snapshot.paramMap.get('id')
     // console.log( "aaff"+this.router.snapshot.paramMap.get('id') );
     this.user.getUser( this.user_id ).subscribe( ( result: any ) => {
       // console.log( result );
-      this.editUser=new FormGroup( {
-        first_name: new FormControl( result['first_name'] ),
-        second_name:new FormControl(result['second_name']),
-        email: new FormControl( result['email'] ),
-        phone:new FormControl(result['tel_number']),
-        bio:new FormControl(result['bio']),
-      } );
     } );
   }
-  UpdateData() {
-
+  updateProfile() {
     this.user.updateProfile(this.profileData).subscribe( ( result ) => {
       //console.log( result );
       this.message=true;

@@ -8,6 +8,7 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent implements OnInit {
   login:any;
+  user_id!:number;
   constructor(private userService : UserService, private router: Router) {}
   ngOnInit(){
     this.login = {
@@ -19,7 +20,9 @@ export class LoginComponent implements OnInit {
     this.userService.loginUser(this.login).subscribe(
       response => {
         console.log(response);
-            this.router.navigateByUrl('/channels');
+        this.user_id = response.user_id
+        // console.log(this.user_id)
+            this.router.navigateByUrl('/channels/'+`${this.user_id}`);
       },
       error => console.log('error',error)
     );

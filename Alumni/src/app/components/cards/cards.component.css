@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
+:root {
+  --brown: #5D4037;
+  --transition-function: cubic-bezier(0.23, 1, 0.32, 1);
+  --white: #FFF;
+}
+
+*, *::after, *::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: linear-gradient(to right bottom, #ffffff, #fafafa, #e7e2e0, #ffffff, #ffffff);;
+  color: var(--white);
+  font-family: 'Raleway', sans-serif;
+}
+
+.title {
+  color: var(--brown);
+  font-size: 2rem;
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  margin: 1rem auto;
+  max-width: 100%;
+  padding: 1rem;
+  width: 70rem;
+}
+
+.card-wrapper {
+  border: .09rem solid transparent;
+  border-radius: .5rem;
+  box-shadow: rgba(0,0,0, 0.66) 0 2rem 3rem 0, inset rgba(255, 255, 255, 0.5) 0 0 0 0.6rem;
+  cursor: pointer;
+  flex-basis: 16rem;
+  margin: 1rem;
+  overflow: hidden;
+  perspective: 800px;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: border-color 330ms var(--transition-function);
+  user-select: none;
+}
+
+.card-wrapper::before {
+  border: .09rem solid var(--white);
+  border-radius: .5rem;
+  content: '';
+  height: 96%;
+  left: .4rem;
+  position: absolute;
+  width: 95%;
+  top: .4rem;
+}
+
+.card {
+  background-color: var(--brown);
+  background-position: 50% 50%;
+  border-radius: .4rem;
+  height: 20rem;
+}
+
+.card-content {
+  bottom: 0;
+  font-size: .9rem;
+  left: 1.5rem;
+  position: absolute;
+  transform: translateY(2.5rem);
+  transition: transform 330ms var(--transition-function);
+}
+
+.card-title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.card-wrapper:hover {
+  border-color: var(--white);
+}
+
+.card-wrapper:hover .card-content {
+  transform: translateY(-1.5rem);
+}

@@ -33,7 +33,9 @@
               "src/custom-theme.scss",
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+              "src/assets/script.js"
+            ]
           },
           "configurations": {
             "production": {

@@ -23,6 +23,11 @@ import { CreateCohortComponent } from './components/create-cohort/create-cohort.
 import { PhotoUploadComponent } from './components/photo-upload/photo-upload.component';
 import { FlutterwaveModule } from "flutterwave-angular-v3";
 
+import { ContactsComponent } from './components/contacts/contacts.component';
+import { GroupsComponent } from './components/groups/groups.component';
+import { ChatsComponent } from './components/chats/chats.component';
+import { FundraisersComponent } from './components/fundraisers/fundraisers.component';
+import { CohortComponent } from './components/cohort/cohort.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +44,12 @@ import { FlutterwaveModule } from "flutterwave-angular-v3";
     SidebarComponent,
     UserProfileComponent,
     CreateCohortComponent,
-    PhotoUploadComponent
+    PhotoUploadComponent,
+    ContactsComponent,
+    GroupsComponent,
+    ChatsComponent,
+    FundraisersComponent,
+    CohortComponent
   ],
   imports: [
     BrowserModule,

@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { UserService } from 'src/app/services/user.service';
 import { HttpClientXsrfModule } from '@angular/common/http';
 import { Router } from '@angular/router';
-
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
@@ -12,11 +11,8 @@ import { Router } from '@angular/router';
 export class RegisterComponent implements OnInit {
   passwordMismatch: boolean = false;
   usernameExists: boolean = false;
-
   register:any;
-
   constructor(private userService : UserService, private router: Router){}
-
   ngOnInit(){
     this.register = {
       username : '',
@@ -31,7 +27,9 @@ export class RegisterComponent implements OnInit {
         console.log(response);
             this.router.navigateByUrl('/login');
       },
-      error => console.log('error',error)
-    );
+      error => {  
+        alert('An Unexpected Error Occured. Please try again later!');  
+        console.log(error);
+      });
   }
 }

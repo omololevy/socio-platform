@@ -1,15 +1,27 @@
 import { Component, OnInit } from '@angular/core';
+import { UserService } from 'src/app/services/user.service';
 
 @Component({
   selector: 'app-chats',
   templateUrl: './chats.component.html',
-  styleUrls: ['./chats.component.css']
+  styleUrls: ['./chats.component.css'],
+  providers: [UserService],
+
 })
-export class ChatsComponent implements OnInit {
+export class ChatsComponent{
+  users = [{username:''}];
 
-  constructor() { }
+  constructor(private user : UserService) { this.getUsers();}
 
-  ngOnInit(): void {
+  getUsers =() =>{
+    this.user.getAllUsers().subscribe(
+      data =>{
+        this.users = data ;
+      },
+      error =>{
+      console.log(error);
+     }
+    );
   }
 
 }

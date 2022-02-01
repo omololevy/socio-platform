@@ -20,6 +20,9 @@ import { UserProfileComponent } from './components/user-profile/user-profile.com
 import { UpdateProfileComponent } from './components/update-profile/update-profile.component'
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CreateCohortComponent } from './components/create-cohort/create-cohort.component';
+import { PhotoUploadComponent } from './components/photo-upload/photo-upload.component';
+import { FlutterwaveModule } from "flutterwave-angular-v3";
+
 
 @NgModule({
   declarations: [
@@ -35,7 +38,8 @@ import { CreateCohortComponent } from './components/create-cohort/create-cohort.
     ChannelsComponent,
     SidebarComponent,
     UserProfileComponent,
-    CreateCohortComponent
+    CreateCohortComponent,
+    PhotoUploadComponent
   ],
   imports: [
     BrowserModule,
@@ -45,6 +49,7 @@ import { CreateCohortComponent } from './components/create-cohort/create-cohort.
     ReactiveFormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
+    FlutterwaveModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

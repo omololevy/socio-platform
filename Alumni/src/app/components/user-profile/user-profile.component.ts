@@ -12,7 +12,6 @@ import { ActivatedRoute } from '@angular/router';
   providers: [UserService,ProfileService],
 })
 export class UserProfileComponent implements OnInit {
-  user_profile:any;
   username = '';
   email = '';
   first_name = '';
@@ -20,7 +19,7 @@ export class UserProfileComponent implements OnInit {
   user_id!:any;
 
 
-  constructor(private userService : UserService,private user: ProfileService, private router: ActivatedRoute) { }
+  constructor(private userService : UserService,private user: ProfileService, private router: ActivatedRoute) {} 
 
   ngOnInit(): void {
 
@@ -29,14 +28,6 @@ export class UserProfileComponent implements OnInit {
     this.user.getUser( this.user_id ).subscribe( ( result: any ) => {
       console.log( result );
     } );
-
-    
-    this.user_profile = {
-      username : '',
-      email :'',
-      password:'',
-    };
-    
 
   }
 

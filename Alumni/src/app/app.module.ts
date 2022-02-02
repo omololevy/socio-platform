@@ -27,6 +27,7 @@ import { FundraisersComponent } from './components/fundraisers/fundraisers.compo
 import { CohortComponent } from './components/cohort/cohort.component';
 import { CardsComponent } from './components/cards/cards.component';
 import { GroupPostsComponent } from './components/group-posts/group-posts.component';
+import { AllPostsComponent } from './components/all-posts/all-posts.component';
 // import { FlutterwaveModule } from "flutterwave-angular-v3";
 
 
@@ -51,7 +52,8 @@ import { GroupPostsComponent } from './components/group-posts/group-posts.compon
     FundraisersComponent,
     CohortComponent,
     CardsComponent,
-    GroupPostsComponent
+    GroupPostsComponent,
+    AllPostsComponent
   ],
   imports: [
     BrowserModule,

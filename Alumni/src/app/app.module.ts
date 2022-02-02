@@ -22,10 +22,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CreateCohortComponent } from './components/create-cohort/create-cohort.component';
 import { PhotoUploadComponent } from './components/photo-upload/photo-upload.component';
 import { ContactsComponent } from './components/contacts/contacts.component';
-import { GroupsComponent } from './components/groups/groups.component';
 import { ChatsComponent } from './components/chats/chats.component';
 import { FundraisersComponent } from './components/fundraisers/fundraisers.component';
 import { CohortComponent } from './components/cohort/cohort.component';
+import { CardsComponent } from './components/cards/cards.component';
+import { GroupPostsComponent } from './components/group-posts/group-posts.component';
+// import { FlutterwaveModule } from "flutterwave-angular-v3";
+
 
 @NgModule({
   declarations: [
@@ -44,10 +47,11 @@ import { CohortComponent } from './components/cohort/cohort.component';
     CreateCohortComponent,
     PhotoUploadComponent,
     ContactsComponent,
-    GroupsComponent,
     ChatsComponent,
     FundraisersComponent,
-    CohortComponent
+    CohortComponent,
+    CardsComponent,
+    GroupPostsComponent
   ],
   imports: [
     BrowserModule,
@@ -57,6 +61,7 @@ import { CohortComponent } from './components/cohort/cohort.component';
     ReactiveFormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
+    // FlutterwaveModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

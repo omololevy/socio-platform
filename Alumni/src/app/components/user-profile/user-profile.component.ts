@@ -12,15 +12,15 @@ import { ActivatedRoute } from '@angular/router';
   providers: [UserService,ProfileService],
 })
 export class UserProfileComponent implements OnInit {
-  user_profile:any;
-  username = '';
-  email = '';
-  first_name = '';
-  second_name = '';
+  profile = [{first_name:''},{second_name:''},{email:''}];
+  first_name = ''
+  second_name = ''
+  email = ''
+  username = ''
   user_id!:any;
 
 
-  constructor(private userService : UserService,private user: ProfileService, private router: ActivatedRoute) { }
+  constructor(private user: ProfileService, private router: ActivatedRoute) {this.getProfile();} 
 
   ngOnInit(): void {
 
@@ -30,14 +30,16 @@ export class UserProfileComponent implements OnInit {
       console.log( result );
     } );
 
-    
-    this.user_profile = {
-      username : '',
-      email :'',
-      password:'',
-    };
-    
-
+  }
+  getProfile =() =>{
+    this.user.getUser(this.user_id).subscribe(
+      data =>{
+        this.profile ;
+      },
+      error =>{
+      console.log(error);
+     }
+    );
   }
 
 }

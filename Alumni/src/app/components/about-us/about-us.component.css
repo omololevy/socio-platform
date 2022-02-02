@@ -88,3 +88,21 @@ margin-bottom: 50px;
 
 
 }
+
+.testbutton {
+    font-family: verdana;
+    font-weight: bold;
+    color: #FFFFFF !important;
+    font-size: 14px;
+    text-shadow: 1px 1px 0px #FFFFFF;
+    box-shadow: 1px 1px 1px #FFFFFF;
+    padding: 10px 25px;
+    border-radius: 10px;
+    border: 1px outset #A7B557;
+    background: #A7B557;
+    background: linear-gradient(to top, #A7B557, #A7B557);
+  }
+  .testbutton:hover {
+    color: #A7B557 !important;
+    background: #FFFFFF;
+  }

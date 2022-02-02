@@ -18,31 +18,35 @@
           <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" /></svg>
         <span>New Message</span>
       </button>
+      <div *ngFor="let user of users">
 
-      <button class="card card-small" (click)="selection.value = 'material'" tabindex="0">
-        <img class="rounded-circle" src="https://img.icons8.com/offices/30/000000/person-male.png" />
-        <span>Valentino</span>
-      </button>
+        <button class="card card-small" (click)="selection.value = 'material'" tabindex="0">
+          <img class="rounded-circle" src="https://img.icons8.com/offices/30/000000/person-male.png" />
+          <span>{{ user.username }}</span>
+        </button>
+  
+        <!-- <button class="card card-small" (click)="selection.value = 'pwa'" tabindex="0">
+          <img class="rounded-circle" src="https://img.icons8.com/offices/30/000000/person-male.png" />
+          <span>{{user.username}}</span>
+        </button>
+  
+        <button class="card card-small" (click)="selection.value = 'dependency'" tabindex="0">
+          <img class="rounded-circle" src="https://img.icons8.com/offices/30/000000/person-male.png" />
+          <span>Ivan</span>
+        </button>
+  
+        <button class="card card-small" (click)="selection.value = 'test'" tabindex="0">
+          <img class="rounded-circle" src="https://img.icons8.com/offices/30/000000/person-male.png" />
+          <span>Meshack</span>
+        </button>
+  
+        <button class="card card-small" (click)="selection.value = 'build'" tabindex="0">
+          <img class="rounded-circle" src="https://img.icons8.com/offices/30/000000/person-male.png" />
+          <span>Nur</span>
+        </button> -->
+      </div>
 
-      <button class="card card-small" (click)="selection.value = 'pwa'" tabindex="0">
-        <img class="rounded-circle" src="https://img.icons8.com/offices/30/000000/person-male.png" />
-        <span>Mwikali</span>
-      </button>
-
-      <button class="card card-small" (click)="selection.value = 'dependency'" tabindex="0">
-        <img class="rounded-circle" src="https://img.icons8.com/offices/30/000000/person-male.png" />
-        <span>Ivan</span>
-      </button>
-
-      <button class="card card-small" (click)="selection.value = 'test'" tabindex="0">
-        <img class="rounded-circle" src="https://img.icons8.com/offices/30/000000/person-male.png" />
-        <span>Meshack</span>
-      </button>
-
-      <button class="card card-small" (click)="selection.value = 'build'" tabindex="0">
-        <img class="rounded-circle" src="https://img.icons8.com/offices/30/000000/person-male.png" />
-        <span>Nur</span>
-      </button>
+      
     </div>
   </div>
 </div>

@@ -17,18 +17,18 @@ const routes: Routes = [
   {path: '', redirectTo:'home', pathMatch:'full'},
   {path: 'home', component: HomePageComponent },
   {path: 'blogs', component: BlogsComponent },
-  {path: 'channels', component: ChannelsComponent,  data:{requiresLogin: true}},
-  {path: 'user_profile', component: UserProfileComponent},
+  {path: 'channels/:id', component: ChannelsComponent,  data:{requiresLogin: true}},
+  {path: 'user_profile/:id', component: UserProfileComponent},
   {path: 'about', component: AboutUsComponent },
-  {path: 'update_profile', component: UpdateProfileComponent},
+  {path: 'update_profile/:id', component: UpdateProfileComponent},
   {path: 'register', component: RegisterComponent},
   {path: 'login', component: LoginComponent},
   {path: '', redirectTo: 'index', pathMatch: 'full'},
   {path: '**', redirectTo: 'index', pathMatch: 'full'},
-  {path: 'create_cohort', component: CreateCohortComponent},
-  {path: 'cohort', component: CohortComponent},
-  {path: 'chats', component: ChatsComponent},
-  {path: 'fundraiser', component: FundraisersComponent}
+  {path: 'create_cohort/:id', component: CreateCohortComponent},
+  {path: 'cohort/:id', component: CohortComponent},
+  {path: 'chats/:id', component: ChatsComponent},
+  {path: 'fundraiser/:id', component: FundraisersComponent}
 
   
 ];

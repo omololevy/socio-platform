@@ -27,7 +27,9 @@ export class RegisterComponent implements OnInit {
         console.log(response);
             this.router.navigateByUrl('/login');
       },
-      error => console.log('error',error)
-    );
+      error => {  
+        alert('An Unexpected Error Occured. Please try again later!');  
+        console.log(error);
+      });
   }
 }

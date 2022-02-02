@@ -1,39 +1,47 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from 'src/app/services/user.service';
-import { HttpClientXsrfModule } from '@angular/common/http';
-
+import { ProfileService } from 'src/app/services/profile.service';
+import { FormGroup, FormControl } from '@angular/forms';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-update-profile',
   templateUrl: './update-profile.component.html',
   styleUrls: ['./update-profile.component.css'],
-  providers: [UserService],
+  providers: [ProfileService,UserService],
 })
 export class UpdateProfileComponent implements OnInit {
-  update:any;
+  // update:any;
+  user_id!: any;
+  // data: any;
+  profileData: any;
+  image:any;
 
-  constructor(private userService : UserService) { }
+  constructor( private userService: UserService,private user: ProfileService, private router: ActivatedRoute ) { }
 
+  message: boolean=false;
   ngOnInit(){
-    this.update = {
-      first_name : '',
-      second_name: '',
-      email : '',
-      profile_pic: '',
-      phone_number :'',
-      bio :'',
-
+    this.profileData = {
+      first_name:'',
+      second_name:'',
+      email :'',
+      tel_number:'',
+      bio:''
     };
+    this.user_id = this.router.snapshot.paramMap.get('id')
+    // console.log( "aaff"+this.router.snapshot.paramMap.get('id') );
+    this.user.getUser( this.user_id ).subscribe( ( result: any ) => {
+      // console.log( result );
+    } );
   }
-
-
-updateProfile(){
-  this.userService.updateProfile(this.update).subscribe(
-    response => {
-      alert('Profile for ' + this.update.username + ' has been updated successfully!')
-    },
-    error => console.log('error',error)
-  );
-}
-
+  updateProfile() {
+    this.user.updateProfile(this.profileData).subscribe( ( result ) => {
+      //console.log( result );
+      this.message=true;
+    } )
+    
+  }
+  removeMessage() {
+    this.message=false;
+  }
 }

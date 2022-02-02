@@ -18,7 +18,7 @@ export class ProfileService {
   }
   getUser(user_id:number){
     return this.http.get(`${this.url}${user_id}/`)
-  }
+  }    
   updateProfile(profileData:any):Observable<any>{
     let attr;
     

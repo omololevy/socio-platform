@@ -28,6 +28,7 @@ import { GroupsComponent } from './components/groups/groups.component';
 import { ChatsComponent } from './components/chats/chats.component';
 import { FundraisersComponent } from './components/fundraisers/fundraisers.component';
 import { CohortComponent } from './components/cohort/cohort.component';
+import { CardsComponent } from './components/cards/cards.component';
 
 @NgModule({
   declarations: [
@@ -49,7 +50,8 @@ import { CohortComponent } from './components/cohort/cohort.component';
     GroupsComponent,
     ChatsComponent,
     FundraisersComponent,
-    CohortComponent
+    CohortComponent,
+    CardsComponent
   ],
   imports: [
     BrowserModule,

@@ -28,6 +28,8 @@ import { CohortComponent } from './components/cohort/cohort.component';
 import { CardsComponent } from './components/cards/cards.component';
 import { GroupPostsComponent } from './components/group-posts/group-posts.component';
 import { AllPostsComponent } from './components/all-posts/all-posts.component';
+import { MyDashboardComponent } from './components/my-dashboard/my-dashboard.component';
+import { PostFormComponent } from './components/post-form/post-form.component';
 // import { FlutterwaveModule } from "flutterwave-angular-v3";
 
 
@@ -53,7 +55,9 @@ import { AllPostsComponent } from './components/all-posts/all-posts.component';
     CohortComponent,
     CardsComponent,
     GroupPostsComponent,
-    AllPostsComponent
+    AllPostsComponent,
+    MyDashboardComponent,
+    PostFormComponent
   ],
   imports: [
     BrowserModule,

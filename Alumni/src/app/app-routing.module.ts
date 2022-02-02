@@ -1,3 +1,4 @@
+import { PostFormComponent } from './components/post-form/post-form.component';
 import { ChatsComponent } from './components/chats/chats.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
@@ -30,7 +31,8 @@ const routes: Routes = [
   {path: 'cohort/:id', component: CohortComponent},
   {path: 'chats/:id', component: ChatsComponent},
   {path: 'fundraiser/:id', component: FundraisersComponent},
-  {path: 'group_posts/:id', component: GroupPostsComponent}
+  {path: 'group_posts/:id', component: GroupPostsComponent},
+  {path: 'post_form/:id', component: PostFormComponent},
 
   
 ];

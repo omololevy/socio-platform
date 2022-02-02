@@ -27,6 +27,8 @@ import { ChatsComponent } from './components/chats/chats.component';
 import { FundraisersComponent } from './components/fundraisers/fundraisers.component';
 import { CohortComponent } from './components/cohort/cohort.component';
 import { CardsComponent } from './components/cards/cards.component';
+// import { FlutterwaveModule } from "flutterwave-angular-v3";
+
 
 @NgModule({
   declarations: [
@@ -59,6 +61,7 @@ import { CardsComponent } from './components/cards/cards.component';
     ReactiveFormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
+    // FlutterwaveModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

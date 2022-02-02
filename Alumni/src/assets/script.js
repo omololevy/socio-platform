@@ -22,4 +22,3 @@
 //       50}% ${mousePosition.y / containerHeight * 50}%`;
 //   })
 // );
-alert('hello kim')

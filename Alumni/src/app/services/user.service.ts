@@ -9,16 +9,17 @@ export class UserService {
   baseurl = "http://127.0.0.1:8000/users/"
   photoUrl = "http://res.cloudinary.com/dim8pysls/image/upload/"
 
-  constructor(private http:HttpClient) { }
+  constructor(private http: HttpClient) { }
 
-  registerUser(userData:any):Observable<any>{
+  registerUser(userData: any): Observable<any> {
     let headers;
     console.log(userData)
-    headers = {headers: new HttpHeaders({
-      'Content-Type': 'application/json'
-    })
+    headers = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json'
+      })
     }
-    return this.http.post('http://127.0.0.1:8000/users/',userData, headers)
+    return this.http.post('http://127.0.0.1:8000/users/', userData, headers)
   }
 
   loginUser(userData:any):Observable<any>{

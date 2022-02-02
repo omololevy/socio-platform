@@ -21,14 +21,13 @@ import { UpdateProfileComponent } from './components/update-profile/update-profi
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CreateCohortComponent } from './components/create-cohort/create-cohort.component';
 import { PhotoUploadComponent } from './components/photo-upload/photo-upload.component';
+// import { FlutterwaveModule } from "flutterwave-angular-v3";
 import { ContactsComponent } from './components/contacts/contacts.component';
 import { GroupsComponent } from './components/groups/groups.component';
 import { ChatsComponent } from './components/chats/chats.component';
 import { FundraisersComponent } from './components/fundraisers/fundraisers.component';
 import { CohortComponent } from './components/cohort/cohort.component';
 import { CardsComponent } from './components/cards/cards.component';
-// import { FlutterwaveModule } from "flutterwave-angular-v3";
-
 
 @NgModule({
   declarations: [

@@ -295,3 +295,62 @@
   .card {
       border-color: #5A8F11;
   }
+
+
+  div { 
+    width: 200px;
+    height: 200px;  
+    border: 1px solid white; 
+ } 
+ .static { 
+    display: inline-block;  
+    background: silver; 
+    margin-top: 20px;
+    margin-left: 600px;
+    -webkit-perspective: 500px;
+    -moz-perspective: 500px;    
+    perspective: 500px; 
+ } 
+ @-webkit-keyframes iliketomoveit { 
+    100% { 
+       -moz-transform: rotateY(360deg);  
+       -webkit-transform: rotateY(360deg); 
+       -ms-transform: rotateY(360deg);
+       transform: rotateY(360deg);
+    } 
+ } @keyframes iliketomoveit { 
+    100% { 
+       -moz-transform: rotateY(360deg);
+       -webkit-transform: rotateY(360deg);  
+       -ms-transform: rotateY(360deg);
+       transform: rotateY(360deg); 
+    } 
+ } 
+ .test {
+    -webkit-animation: iliketomoveit 15s linear infinite; 
+    animation : iliketomoveit 15s linear infinite; 
+    background: #A7B557; 
+    transform-style: flat;
+ } 
+ .test2 { 
+    -webkit-animation: iliketomoveit 15s linear infinite; 
+    animation: iliketomoveit 15s linear infinite;
+    background: orange;  
+ }
+ .test3 {
+    -webkit-animation: iliketomoveit 15s linear infinite;          
+    animation: iliketomoveit 15s linear infinite; 
+    background: green;
+    -webkit-transform-style: preserve-3d; 
+    -moz-transform-style: preserve-3d;
+    transform-style: preserve-3d; 
+ }
+
+ /* .logo { 
+  background: #A7B557;
+  color: #fff;
+  padding: 2px;
+  font-size: 2rem;
+  writing-mode: vertical-lr;
+  text-orientation: upright;
+} */

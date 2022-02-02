@@ -12,7 +12,7 @@ import { ActivatedRoute } from '@angular/router';
   providers: [UserService,ProfileService],
 })
 export class UserProfileComponent implements OnInit {
-  profile = [{email:'',id:'',username:''}];
+  // profile = [{email:'',id:'',username:''}];
   
   user_id!:any;
 

@@ -7,6 +7,7 @@ import { Observable } from 'rxjs/';
 })
 export class UserService {
   baseAPIUrl = "http://127.0.0.1:8000"
+  // baseApiUrl = "http://127.0.0.1:8000/profile/"
   photoUrl = "http://res.cloudinary.com/dim8pysls/image/upload/"
 
   constructor(private http:HttpClient) { }
@@ -22,7 +23,7 @@ export class UserService {
   // }
 
   loginUser(username: string, password: string) {
-    return this.http.post(this.baseAPIUrl + '/auth/login/', 
+    return this.http.post(this.baseAPIUrl + '/api-auth/', 
     {
       username: username,
       password: password,
@@ -39,7 +40,7 @@ export class UserService {
 
   registerUser(username: string,password: string,email: string,first_name: string,second_name: string) 
   {
-    return this.http.post(this.baseAPIUrl + '/users', 
+    return this.http.post(this.baseAPIUrl + '/users/', 
     {
       username: username,
       password: password,

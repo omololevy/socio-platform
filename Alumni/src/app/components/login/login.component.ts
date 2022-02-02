@@ -31,7 +31,7 @@ export class LoginComponent implements OnInit {
             localStorage.setItem('token', response.token);
           }
         );
-        this.router.navigateByUrl('/user_profile');
+        this.router.navigateByUrl('/user_profile/:id');
       },
       (error:any) => {
         console.log(error);

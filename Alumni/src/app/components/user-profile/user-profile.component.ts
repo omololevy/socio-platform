@@ -13,7 +13,10 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class UserProfileComponent implements OnInit {
   profile = [{first_name:''},{second_name:''},{email:''}];
-  
+  first_name = ''
+  second_name = ''
+  email = ''
+  username = ''
   user_id!:any;
 
 
@@ -31,7 +34,7 @@ export class UserProfileComponent implements OnInit {
   getProfile =() =>{
     this.user.getUser(this.user_id).subscribe(
       data =>{
-        this.profile = data ;
+        this.profile ;
       },
       error =>{
       console.log(error);

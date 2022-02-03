@@ -14,6 +14,7 @@ import { CreateCohortComponent } from './components/create-cohort/create-cohort.
 import { CohortComponent } from './components/cohort/cohort.component';
 import { FundraisersComponent } from './components/fundraisers/fundraisers.component';
 import { GroupPostsComponent } from './components/group-posts/group-posts.component';
+import { MyDashboardComponent } from './components/my-dashboard/my-dashboard.component';
 
 const routes: Routes = [
   {path: '', redirectTo:'home', pathMatch:'full'},
@@ -33,8 +34,7 @@ const routes: Routes = [
   {path: 'fundraiser/:id', component: FundraisersComponent},
   {path: 'group_posts/:id', component: GroupPostsComponent},
   {path: 'post_form/:id', component: PostFormComponent},
-
-  
+  {path: 'my_dashboard/:id', component: MyDashboardComponent}, 
 ];
 
 @NgModule({

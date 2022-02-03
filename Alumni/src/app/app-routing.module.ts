@@ -15,6 +15,8 @@ import { CohortComponent } from './components/cohort/cohort.component';
 import { FundraisersComponent } from './components/fundraisers/fundraisers.component';
 import { GroupPostsComponent } from './components/group-posts/group-posts.component';
 import { MyDashboardComponent } from './components/my-dashboard/my-dashboard.component';
+import { LoginOptionsComponent } from './components/login-options/login-options.component';
+
 
 const routes: Routes = [
   {path: '', redirectTo:'home', pathMatch:'full'},
@@ -35,6 +37,7 @@ const routes: Routes = [
   {path: 'group_posts/:id', component: GroupPostsComponent},
   {path: 'post_form/:id', component: PostFormComponent},
   {path: 'my_dashboard/:id', component: MyDashboardComponent}, 
+  {path: 'login_options', component: LoginOptionsComponent},
 ];
 
 @NgModule({

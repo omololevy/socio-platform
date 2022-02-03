@@ -5,6 +5,7 @@
   </div>
 
   <div class="col-md-6">
+<<<<<<< HEAD
     <div class ="funds">
       <div class="static">
         <b>Moringa Alumni Fundraisers</b>
@@ -16,6 +17,23 @@
         </a>
       </div>
     </div>
+=======
+    <h1 class="text-center"><strong style="color:#919D47;">FUNDRAISERS</strong></h1><hr>
+    <div class="card-container">
+
+      <div *ngFor="let fundraiser of fundraisers">
+        <a class="card" rel="noopener" href="group_posts/{{user_id}}">
+          <img src="https://img.icons8.com/external-icongeek26-outline-colour-icongeek26/25/000000/external-funding-crowdfunding-icongeek26-outline-colour-icongeek26.png"/>&nbsp;&nbsp;          <span><strong>{{ fundraiser.fund_name }}</strong></span>&nbsp;&nbsp;
+          <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+            <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" /></svg>
+        </a>
+      </div>
+
+    </div>
+  </div>
+  <div class="col-md-3">
+    <app-contacts></app-contacts>
+>>>>>>> e2557d525abda4e78f853b4ca9e9aa36823c5fbd
   </div>
 </div>
 

@@ -16,11 +16,12 @@
     <div class="card-container">
 
       <div *ngFor="let cohort of cohorts">
-        <a class="card" rel="noopener" href="group_posts/{{user_id}}">
+        <a class="card" rel="noopener">
           <img src="https://img.icons8.com/office/25/000000/crowd.png" />&nbsp;&nbsp;&nbsp;&nbsp;
           <span><strong>{{cohort.name}}</strong></span>&nbsp;&nbsp;
           <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-            <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" /></svg>
+          <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" /></svg>
+          <button style="background-color: #919D47;" class="btn btn btn-sm"><a style="color:black;" href="group_posts/{{user_id}}">Join Group</a> </button>
         </a>
       </div>
 

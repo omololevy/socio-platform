@@ -4,7 +4,7 @@
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     font-size: 14px;
     color: #333;
-    box-sizing: border-box;
+    box-sizing: border-box;  
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
@@ -346,11 +346,11 @@
     transform-style: preserve-3d; 
  }
 
- /* .logo { 
+ .logo { 
   background: #A7B557;
   color: #fff;
   padding: 2px;
   font-size: 2rem;
   writing-mode: vertical-lr;
   text-orientation: upright;
-} */
+}

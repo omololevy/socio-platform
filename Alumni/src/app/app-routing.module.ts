@@ -31,7 +31,7 @@ const routes: Routes = [
   {path: '', redirectTo: 'index', pathMatch: 'full'},
   {path: '**', redirectTo: 'index', pathMatch: 'full'},
   {path: 'create_cohort/:id', component: CreateCohortComponent},
-  {path: 'cohort/:public-cohort_id', component: CohortComponent},
+  {path: 'cohort/:id', component: CohortComponent},
   {path: 'chats/:id', component: ChatsComponent},
   {path: 'fundraiser/:id', component: FundraisersComponent},
   {path: 'group_posts/:id', component: GroupPostsComponent},

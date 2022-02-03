@@ -12,6 +12,8 @@ import { UpdateProfileComponent } from './components/update-profile/update-profi
 import { CreateCohortComponent } from './components/create-cohort/create-cohort.component';
 import { CohortComponent } from './components/cohort/cohort.component';
 import { FundraisersComponent } from './components/fundraisers/fundraisers.component';
+import { GroupPostsComponent } from './components/group-posts/group-posts.component';
+import { PostFormComponent } from './components/post-form/post-form.component';
 
 const routes: Routes = [
   {path: '', redirectTo:'home', pathMatch:'full'},
@@ -28,7 +30,9 @@ const routes: Routes = [
   {path: 'create_cohort/:id', component: CreateCohortComponent},
   {path: 'cohort/:id', component: CohortComponent},
   {path: 'chats/:id', component: ChatsComponent},
-  {path: 'fundraiser/:id', component: FundraisersComponent}
+  {path: 'fundraiser/:id', component: FundraisersComponent},
+  {path: 'group_posts/:id', component: GroupPostsComponent},
+  {path: 'post-form', component:PostFormComponent}
 
   
 ];

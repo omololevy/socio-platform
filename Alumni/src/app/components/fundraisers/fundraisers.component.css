@@ -297,7 +297,7 @@
   }
 
 
-  div { 
+  div{ 
     width: 200px;
     height: 200px;  
     border: 1px solid white; 
@@ -306,7 +306,7 @@
     display: inline-block;  
     background: silver; 
     margin-top: 20px;
-    margin-left: 600px;
+    margin-left: 600px; 
     -webkit-perspective: 500px;
     -moz-perspective: 500px;    
     perspective: 500px; 

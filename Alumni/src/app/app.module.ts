@@ -23,11 +23,15 @@ import { CreateCohortComponent } from './components/create-cohort/create-cohort.
 import { PhotoUploadComponent } from './components/photo-upload/photo-upload.component';
 // import { FlutterwaveModule } from "flutterwave-angular-v3";
 import { ContactsComponent } from './components/contacts/contacts.component';
-import { GroupsComponent } from './components/groups/groups.component';
 import { ChatsComponent } from './components/chats/chats.component';
 import { FundraisersComponent } from './components/fundraisers/fundraisers.component';
 import { CohortComponent } from './components/cohort/cohort.component';
 import { CardsComponent } from './components/cards/cards.component';
+import { GroupPostsComponent } from './components/group-posts/group-posts.component';
+import { AllPostsComponent } from './components/all-posts/all-posts.component';
+import { PostFormComponent } from './components/post-form/post-form.component';
+// import { FlutterwaveModule } from "flutterwave-angular-v3";
+
 
 @NgModule({
   declarations: [
@@ -46,11 +50,13 @@ import { CardsComponent } from './components/cards/cards.component';
     CreateCohortComponent,
     PhotoUploadComponent,
     ContactsComponent,
-    GroupsComponent,
     ChatsComponent,
     FundraisersComponent,
     CohortComponent,
-    CardsComponent
+    CardsComponent,
+    GroupPostsComponent,
+    AllPostsComponent,
+    PostFormComponent
   ],
   imports: [
     BrowserModule,

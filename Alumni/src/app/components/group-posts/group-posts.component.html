@@ -6,22 +6,28 @@
   <div class="col-md-6">
     <h1 class="text-center">
       <span>Group Name</span>&nbsp;&nbsp;
-      <span class="btn btn-outline-success" href="post_form">Post</span>&nbsp;&nbsp;
-      <span class="btn btn-outline-danger" href="">Exit the Group</span>&nbsp;&nbsp;
+      <a class="btn btn-outline-success" href="/post_form/{{user_id}}">Post</a>&nbsp;&nbsp;
+      <a class="btn btn-outline-danger" href="/">Exit the Group</a>&nbsp;&nbsp;
     </h1>
     <hr>
     <div class="card-container">
       <div class="card-columns">
         <div class="card" style="width: 20rem;">
-          <div class="ribbon"><span><b>Post Title</b></span></div>
-
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTvggQCUN0eI6nSchGn3a8baIUHROeP6lRWA&usqp=CAU"
-            class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title"><b>Author: ~Name</b></h5>
-            <p class="card-text">Some brief text about the subject the author is writing about.</p>
-            <a href="/" class="testbutton">Read<b>...</b> </a>
-
+          <div *ngFor="let post of posts">
+            <div class="card-container">
+              <div class="card-columns">
+                <div class="card" style="width: 20rem;">
+                  <div class="ribbon"><span><b>{{post.title}}</b></span></div>
+                  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTvggQCUN0eI6nSchGn3a8baIUHROeP6lRWA&usqp=CAU"
+                    class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title"><b>Author: ~Name</b></h5>
+                    <p class="card-text">{{post.post}}</p>
+                    <a href="/" class="testbutton">Read<b>...</b> </a>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

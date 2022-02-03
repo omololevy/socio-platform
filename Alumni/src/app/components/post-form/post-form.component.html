@@ -1,1 +1,54 @@
-<p>post-form works!</p>
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Update Profile</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css" />
+  <!-- <link rel="stylesheet" href="assets/css/style.css"> -->
+</head>
+<div class="row">
+
+  <div class="col-md-3">
+    <app-sidebar>
+
+    </app-sidebar>
+  </div>
+
+  <div class="col-md-9">
+
+    <body>
+      <div class="login-dark">
+        <!-- <div >
+          <strong>Success!</strong> Post Submitted
+          <button  type="button" data-bs-dismiss="alert" aria-label="Close">X</button>
+        </div> -->
+        <form >
+          <h2 class="text-center" style="color: #5A8F11 !important">Write a Post</h2>
+          <div class="form-group">
+            <input class="form-control" [(ngModel)] ="post.title" type="text" name="title" placeholder="Post Title" />
+          </div>
+          <div class="form-group">
+            <input class="form-control" [(ngModel)] ="post.post"type="textarea" name="Content" placeholder="Post Content" />
+          </div>
+          <!-- <div class="form-group">
+            <app-photo-upload></app-photo-upload>
+          </div> -->
+          <div class="form-group">
+            <button class="btn btn-block text-light"(click)="posts()" type="submit" style="background-color: #5A8F11 !important">
+              Save
+            </button>
+          </div>
+          <a routerLink="/user_profile/" class="forgot">Cancel</a>
+        </form>
+      </div>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+    </body>
+  </div>
+</div>
+
+
+</html>

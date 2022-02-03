@@ -1,7 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AboutUsComponent } from './components/about-us/about-us.component';
@@ -21,7 +19,6 @@ import { UpdateProfileComponent } from './components/update-profile/update-profi
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CreateCohortComponent } from './components/create-cohort/create-cohort.component';
 import { PhotoUploadComponent } from './components/photo-upload/photo-upload.component';
-// import { FlutterwaveModule } from "flutterwave-angular-v3";
 import { ContactsComponent } from './components/contacts/contacts.component';
 import { ChatsComponent } from './components/chats/chats.component';
 import { FundraisersComponent } from './components/fundraisers/fundraisers.component';
@@ -29,8 +26,8 @@ import { CohortComponent } from './components/cohort/cohort.component';
 import { CardsComponent } from './components/cards/cards.component';
 import { GroupPostsComponent } from './components/group-posts/group-posts.component';
 import { AllPostsComponent } from './components/all-posts/all-posts.component';
+import { MyDashboardComponent } from './components/my-dashboard/my-dashboard.component';
 import { PostFormComponent } from './components/post-form/post-form.component';
-// import { FlutterwaveModule } from "flutterwave-angular-v3";
 
 
 @NgModule({
@@ -56,6 +53,7 @@ import { PostFormComponent } from './components/post-form/post-form.component';
     CardsComponent,
     GroupPostsComponent,
     AllPostsComponent,
+    MyDashboardComponent,
     PostFormComponent
   ],
   imports: [
@@ -66,7 +64,6 @@ import { PostFormComponent } from './components/post-form/post-form.component';
     ReactiveFormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    // FlutterwaveModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

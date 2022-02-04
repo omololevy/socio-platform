@@ -21,6 +21,9 @@ export class FundraiserService {
     }
     return this.http.post('http://127.0.0.1:8000/fundraiser/',fundraiserData)
   }
+  getFundraiser(fundraiser_id:number){
+    return this.http.get(`${this.baseurl}${fundraiser_id}/`)
+  }   
   getAllFundraisers():Observable<any>{
     return this.http.get(this.baseurl)
   }

@@ -25,6 +25,9 @@
   .spacer {
     flex: 1;
   }
+  .funds{
+    margin-left: 20rem;
+  }
 
   .toolbar {
     position: absolute;

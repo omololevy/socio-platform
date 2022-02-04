@@ -16,7 +16,7 @@ import { GroupPostsComponent } from './components/group-posts/group-posts.compon
 import { PostFormComponent } from './components/post-form/post-form.component';
 import { MyDashboardComponent } from './components/my-dashboard/my-dashboard.component';
 import { LoginOptionsComponent } from './components/login-options/login-options.component';
-
+import { FundComponent } from './components/fund/fund.component';
 
 const routes: Routes = [
   {path: '', redirectTo:'home', pathMatch:'full'},
@@ -38,6 +38,7 @@ const routes: Routes = [
   {path: 'post_form/:id', component: PostFormComponent},
   {path: 'my_dashboard/:id', component: MyDashboardComponent}, 
   {path: 'login_options', component: LoginOptionsComponent},
+  {path: 'fund', component: FundComponent},
 ];
 
 @NgModule({

@@ -39,6 +39,7 @@ export class UpdateProfileComponent implements OnInit {
       //console.log( result );
       this.message=true;
     } )
+    
   }
   removeMessage() {
     this.message=false;

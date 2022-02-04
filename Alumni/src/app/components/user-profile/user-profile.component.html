@@ -6,20 +6,23 @@
     </app-sidebar>
   </div>
 
-  <div class="col-md-9">
+  <div class="col-md-6">
     <div class="container ">
       <div class="row">
         <div class="col-md-3"></div>
         <div class="col-md-6 mt-4 bg-white prof mr-2 ml-2">
-          <div class="card" style="border-color: #5A8F11;">
+          <div class="card" style="border-color: #5A8F11; width:20rem;">
             <h2 class="text-center">My Profile</h2>
             <div style="border-color:#5A8F11; ">
               <img class="rounded-circle account-img d-block mx-auto" src="../../../assets/moringa_logo.png"
                 height="125px" width="125px">
             </div>
-            <h3 class="text-center mt-3">Username: @{{username}}</h3>
-            <h4>{{first_name}} {{second_name}}</h4>
-            <p class="text-center">Email: <a href="mailto:{{email}}">{{email}}</a></p>
+            <!-- <div *ngFor = "let prof of profile | keyvalue">
+              <p class="text-center">Email: <a href="mailto:{{prof.email}}">{{prof.email}}</a></p>
+            </div> -->
+            <!-- <h3 class="text-center mt-3">Username: @{{username}}</h3> -->
+            <!-- <h4>{{first_name}} {{second_name}}</h4> -->
+            <!-- <p class="text-center">Email: <a href="mailto:{{email}}">{{email}}</a></p> -->
             <!-- {% if request.user.profile.cohort %} -->
             <p class="text-center">Cohort: MPFT 47
               <!-- <a class="btn btn-sm btn-info" 
@@ -40,5 +43,8 @@
 
 
     </div>
+  </div>
+  <div class="col-md-3">
+    <app-contacts></app-contacts>
   </div>
 </div>

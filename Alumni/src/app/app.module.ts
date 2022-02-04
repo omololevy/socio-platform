@@ -31,6 +31,7 @@ import { AllPostsComponent } from './components/all-posts/all-posts.component';
 import { MyDashboardComponent } from './components/my-dashboard/my-dashboard.component';
 import { PostFormComponent } from './components/post-form/post-form.component';
 import { LoginOptionsComponent } from './components/login-options/login-options.component';
+import { FundComponent } from './components/fund/fund.component';
 // import { FlutterwaveModule } from "flutterwave-angular-v3";
 
 
@@ -59,7 +60,8 @@ import { LoginOptionsComponent } from './components/login-options/login-options.
     AllPostsComponent,
     MyDashboardComponent,
     PostFormComponent,
-    LoginOptionsComponent
+    LoginOptionsComponent,
+    FundComponent
   ],
   imports: [
     BrowserModule,

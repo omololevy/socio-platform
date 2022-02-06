@@ -4,9 +4,7 @@
   }
 }
 
-a {
-  background-color: #919D47;
-}
+
 
 /* Sidebar */
 .sidebar {
@@ -39,16 +37,14 @@ a {
   overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
 }
 .items {
-  color: azure;
+  color: rgb(233, 109, 7);
   font-weight: bolder;
 }
 .items:hover {
-  color: #919D47;
+  color: #060d4d;
   background-color: ivory;
 }
+
 .list-group-item{
-  color: azure;
-}
-.list-group-item:hover{
-  color: #919D47;
+  background-color: #a5becf;
 }

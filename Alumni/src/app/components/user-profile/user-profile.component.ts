@@ -12,32 +12,32 @@ import { ActivatedRoute } from '@angular/router';
   providers: [UserService,ProfileService],
 })
 export class UserProfileComponent implements OnInit {
-  user_profile:any;
-  username = '';
-  email = '';
-  first_name = '';
-  second_name = '';
+  // profile = [{email:'',id:'',username:''}];
+  
   user_id!:any;
 
 
-  constructor(private userService : UserService,private user: ProfileService, private router: ActivatedRoute) { }
+  constructor(private user: ProfileService, private router: ActivatedRoute) {} 
 
   ngOnInit(): void {
-
     this.user_id = this.router.snapshot.paramMap.get('id')
     // console.log( "aaff"+this.router.snapshot.paramMap.get('id') );
     this.user.getUser( this.user_id ).subscribe( ( result: any ) => {
-      console.log( result );
+      // console.log( result );
     } );
-
-    
-    this.user_profile = {
-      username : '',
-      email :'',
-      password:'',
-    };
-    
-
   }
+  // getProfile =() =>{
+  //   console.log('dvobonn')
+  //   this.user.getUser(this.user_id).subscribe(
+  //     data =>{
+  //       console.log(data)
+  //       console.log('faaadddd')
+  //       // this.profile = data ;
+  //     },
+  //     error =>{
+  //     console.log(error);
+  //    }
+  //   );
+  // }
 
 }

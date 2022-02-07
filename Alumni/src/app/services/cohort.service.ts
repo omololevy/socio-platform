@@ -6,6 +6,9 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class CohortService {
+  baseurl = "http://127.0.0.1:8000/public-cohort/"
+
+
 
   constructor(private http:HttpClient) { }
 
@@ -18,5 +21,11 @@ export class CohortService {
     }
     return this.http.post('http://127.0.0.1:8000/public-cohort/',pubCohortData)
   }
-  
+  getAllCohorts():Observable<any>{
+    return this.http.get(this.baseurl)
+  }
+
+  getCohort(public_cohort_id:number){
+    return this.http.get(`${this.baseurl}${public_cohort_id}/`)
+  }  
 }

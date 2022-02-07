@@ -12,6 +12,11 @@ import { UpdateProfileComponent } from './components/update-profile/update-profi
 import { CreateCohortComponent } from './components/create-cohort/create-cohort.component';
 import { CohortComponent } from './components/cohort/cohort.component';
 import { FundraisersComponent } from './components/fundraisers/fundraisers.component';
+import { GroupPostsComponent } from './components/group-posts/group-posts.component';
+import { PostFormComponent } from './components/post-form/post-form.component';
+import { MyDashboardComponent } from './components/my-dashboard/my-dashboard.component';
+import { LoginOptionsComponent } from './components/login-options/login-options.component';
+import { FundComponent } from './components/fund/fund.component';
 
 const routes: Routes = [
   {path: '', redirectTo:'home', pathMatch:'full'},
@@ -28,9 +33,12 @@ const routes: Routes = [
   {path: 'create_cohort/:id', component: CreateCohortComponent},
   {path: 'cohort/:id', component: CohortComponent},
   {path: 'chats/:id', component: ChatsComponent},
-  {path: 'fundraiser/:id', component: FundraisersComponent}
-
-  
+  {path: 'fundraiser/:id', component: FundraisersComponent},
+  {path: 'group_posts/:id', component: GroupPostsComponent},
+  {path: 'post_form/:id', component: PostFormComponent},
+  {path: 'my_dashboard/:id', component: MyDashboardComponent}, 
+  {path: 'login_options', component: LoginOptionsComponent},
+  {path: 'fund', component: FundComponent},
 ];
 
 @NgModule({

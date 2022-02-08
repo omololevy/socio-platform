@@ -27,7 +27,7 @@ margin-bottom: 50px;
 .container .title h1{
     text-transform: uppercase;
     font-size: 35px;
-    color:#88941e;
+    color:#16114d;
 }
 .container .title h1::after{
     content: "";
@@ -66,7 +66,7 @@ margin-bottom: 50px;
 .content .article .button a{
     text-decoration:none;
     padding: 8px 25px;
-    background-color: #88941e;
+    background-color: #16114d;
     border-radius: 40px;
     color: #fff;             
     font-size: 18 px;
@@ -83,7 +83,7 @@ margin-bottom: 50px;
     font-size: 10px;
     text-align: center;
     font-style: italic;
-    color: #88941e;
+    color: #16114d;
     display: inline;
 
 

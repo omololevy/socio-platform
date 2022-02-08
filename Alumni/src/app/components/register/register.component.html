@@ -13,8 +13,8 @@
 <body>
   <div class="login-dark">
     <form  #f="ngForm">
-      <h2 class="sr-only" style="color: #5A8F11 !important">Register</h2>
-      <h2 class="text-center" style="color: #5A8F11 !important">Register</h2>
+      <h2 class="sr-only" style="color: #16114d !important">Register</h2>
+      <h2 class="text-center" style="color: #16114d !important">Register</h2>
       <div class="form-group">
         <input class="form-control" [(ngModel)] ="register.username" type="text" name="username" placeholder="Username" />
       </div>
@@ -32,7 +32,7 @@
       </div>
 
       <div class="form-group">
-        <button (click)="registerUser()" class="btn btn-block text-light" type="submit" style="background-color: #5A8F11 !important"
+        <button (click)="registerUser()" class="btn btn-block text-light" type="submit" style="background-color: #16114d !important"
           [disabled]="!f.valid">
           Sign Up
         </button>

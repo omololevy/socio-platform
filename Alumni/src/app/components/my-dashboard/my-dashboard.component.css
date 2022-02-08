@@ -1,0 +1,15 @@
+body,html {
+    color: 24204e;
+    background-color: #d4d7e4;
+}
+.stretch-card{
+    color:#16114d;
+    background-color: #d4d7e4;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+
+}
+.card {
+    background-color: #9ca9e0;
+    border-color: #16114d;
+}

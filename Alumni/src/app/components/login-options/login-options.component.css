@@ -5,15 +5,15 @@
     margin-left: -196px;
     text-align: center;
     font-size: 20px !important;
-    background: #A7B557;
-    background: linear-gradient(to bottom, #A7B557, #6D7535);
+    background: #16114d;
+    background: linear-gradient(to bottom, #16114d, #ff8800);
     box-shadow: rgba(0,0,0,0.3) 0 1px 1px;
     font-family: 'Helvetica Neue',Helvetica, sans-serif;
 }
 .ribbon p {
     font-size: 25px !important;
     color: #F0E8DE;
-    text-shadow: #A7B557 0 1px 0;
+    text-shadow: #16114d 0 1px 0;
     margin:0px;
     padding: 17px 10px;
 }
@@ -22,7 +22,7 @@
     position: absolute;
     display: block;
     bottom: -1em;
-    border: 1.5em solid #6D7535;
+    border: 1.5em solid #16114d;
     z-index: -1;
 }
 .ribbon:before {
@@ -38,7 +38,7 @@
     box-shadow: rgba(0,0,0,0.4) -1px 1px 1px;
 }
 .ribbon .ribbon-content:before, .ribbon .ribbon-content:after {
-    border-color: #A7B557 transparent transparent transparent;
+    border-color: #dd9433 transparent transparent transparent;
     position: absolute;
     display: block;
     border-style: solid;
